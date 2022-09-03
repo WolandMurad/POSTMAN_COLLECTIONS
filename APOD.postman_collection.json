@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "646c8cb0-b48a-4811-9807-7c0530f86cae",
+		"name": "APOD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9985566"
+	},
+	"item": [
+		{
+			"name": "Параметр Date",
+			"item": [
+				{
+					"name": "Проверка Min date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3&date=1995-06-16",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+								},
+								{
+									"key": "date",
+									"value": "1995-06-16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative/Проверка Min date - 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3&date=1995-06-15",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+								},
+								{
+									"key": "date",
+									"value": "1995-06-15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Проверка Max date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3&date=2022-04-25",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+								},
+								{
+									"key": "date",
+									"value": "2022-04-25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Negative/Проверка Max date + 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3&date=2022-04-19",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+								},
+								{
+									"key": "date",
+									"value": "2022-04-19"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Параметр Hd",
+			"item": [
+				{
+					"name": "Проверква значения True",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3&hd=true",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+								},
+								{
+									"key": "hd",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Проверка значения False",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3&hd=false",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+								},
+								{
+									"key": "hd",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Smoke test",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "euJCLz76Z83f8KueGo4dO7HcVfBoPv09YwJza8U3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
